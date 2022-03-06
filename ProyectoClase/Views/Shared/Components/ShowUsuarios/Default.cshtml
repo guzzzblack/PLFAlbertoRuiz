@@ -1,0 +1,62 @@
+﻿@using Model.Domain
+@model List<Usuario>
+<script>
+    function enviar(laUrl, elId){
+        var elform = document.getElementById("MiForm");
+        var eldato = document.getElementById("id");
+        eldato.value = elId;
+        elform.action = laUrl;
+        elform.submit();
+    }
+</script>
+<div class="content-header">
+    <h2>Usuarios</h2>
+</div>
+<form action="" id="MiForm" name="MiForm" method="post">
+    <input type="hidden" id="id" name="id" value="" />
+    <section class="content">
+        <div class="row">
+            @foreach (var m in Model)
+            {
+                Random numero = new Random();
+                int resultado = numero.Next(1, 200);
+                var respuesta = "";
+                if (resultado >= 151)
+                {
+                    respuesta = "small-box bg-info";
+                }
+                else if (resultado >= 101)
+                {
+                    respuesta = "small-box bug-success";
+                }
+                else if (resultado >= 51)
+                {
+                    respuesta = "small-box bg-danger";
+                }
+                else
+                {
+                    respuesta = "small-box bg-danger";
+                }
+                string respuestas = respuesta.ToString();
+                <div class="col-lg-3 col-6">
+                    <div class="@respuestas">
+                        <div class="inner">
+                            <h3>Numero de Tareas</h3>
+                            <p>
+                                @m.nombre
+                                @m.apellido
+                            </p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-android-person"></i>
+                        </div>
+                        <a href="#" data-id="@m.idusuario" class="small-box-footer">
+                            More Info
+                            <i class="fas fas-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+</form>

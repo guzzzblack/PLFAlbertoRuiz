@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    ViewData["Title"] = "Home Page";
+}
+<!--PAGINA PRINCIPAL-->
+
+<div class="content-wrapper">
+    <h1 class="display-4">Tareas</h1>
+    <p>Administrador de Tareas</a>.</p>
+    <!--BOTONES PARA REGISTRARSE Y LOGEARSE-->
+
+<!--AREA PARA PONER LAS CAJITAS DE FORMA LATERAL-->
+<div class="row">
+<!--CAJITA DE CREACION DE TAREAS-->
+<div class="col-lg-3 col-6">
+<div class="small-box bg-success">
+<div class="inner">
+<p>Eres Nuevo?</p>
+</div>
+<div class="icon">
+<i class="ion ion-stats-bars"></i>
+</div>
+<a class="small-box-footer" asp-area="" asp-controller="Login" asp-action="RegistroTarea">Crear Tarea <i class="fas fa-arrow-circle-right"></i></a>
+</div>
+</div>
+<!--CAJITA DE CREACION DE TAREAS-->
+<!--CAJITA DE CONSULTAR TAREAS-->
+<div class="col-lg-3 col-6">
+<div class="small-box bg-warning">
+<div class="inner">
+<p>Ya estas registrado?</p>
+</div>
+<div class="icon">
+<i class="ion ion-person-add"></i>
+</div>
+<a class="small-box-footer"asp-area="" asp-controller="Login" asp-action="Index">Consultar Tareas <i class="fas fa-arrow-circle-right"></i></a>
+</div>
+</div>
+<!--CAJITA DE CONSULTAR TAREAS-->
+<!--CAJITA DE COMPLETAR TAREAS-->
+<div class="col-lg-3 col-6">
+<div class="small-box bg-warning">
+<div class="inner">
+<p>Ya estas registrado?</p>
+</div>
+<div class="icon">
+<i class="ion ion-person-add"></i>
+</div>
+<a class="small-box-footer"asp-area="" asp-controller="Login" asp-action="Index">Completar Tarea <i class="fas fa-arrow-circle-right"></i></a>
+</div>
+</div>
+<!--CAJITA DE COMPLETAR TAREAS-->
+</div>
+<!--AREA PARA PONER LAS CAJITAS DE FORMA LATERAL-->
+</div>

@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administrador de Tareas</title>
+  <!-- CSS Hojas de Estilo -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/all.css">
+    <link rel="stylesheet" href="~/css/all.min.css">
+    <link rel="stylesheet" href="~/css/adminlte.min.css">
+    <link rel="stylesheet" href="~/css/OverlayScrollbars.css">
+  <!-- CSS Hojas de Estilo -->
+</head>
+                                                       <!--INTERIOR DE LA PAGINA-->
+<body class="sidebar-mini layout-fixed" style="height: auto;">
+<div class="wrapper">
+<div class="preloader flex-column justify-content-center align-items-center" style="height: 0px;">
+<img class="animation__shake" src="./AdminLTE 3 _ Dashboard_files/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60" style="display: none;">
+</div>
+
+                    <!--PARTE SUPERIOR DEL ENCABEZADO-->
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!--ENCABEZADO PAGINA DE INICIO Y CONTROL DE BARRA LATERAL-->
+<ul class="navbar-nav">
+<!--BOTON DE BARRA LATERAL-->
+<li class="nav-item">
+<a class="nav-link" data-widget="pushmenu" role="button"> 
+    <i class="fas fa-sliders-h"></i>  <!--ICONO DE LA BARRA LATERAL-->
+</a>
+</li>
+</ul>
+<!--BOTONES DE CUENTA Y CIERRE DE SESION-->
+<ul class="navbar-nav ml-auto">
+    <!--  <li class="nav-item d-none d-sm-inline-block">
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link" >Cuenta</a>
+    </li> -->
+    <li class="nav-item d-none d-sm-inline-block">  
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Cerrar Sesion</a>
+    </li>
+</ul>
+<!--ENCABEZADO PAGINA DE INICIO Y CONTROL DE BARRA LATERAL-->
+</nav>
+            <!--PARTE SUPERIOR DEL ENCABEZADO-->
+                    <!--BARRA LATERAL-->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition"><div class="os-resize-observer-host observed"><div class="os-resize-observer" style="left: 0px; right: auto;"></div></div><div class="os-size-auto-observer observed" style="height: calc(100% + 1px); float: left;"><div class="os-resize-observer"></div></div><div class="os-content-glue" style="margin: 0px -8px; width: 249px; height: 576px;"></div><div class="os-padding"><div class="os-viewport os-viewport-native-scrollbars-invisible" style="overflow-y: scroll;"><div class="os-content" style="padding: 0px 8px; height: 100%; width: 100%;">
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="info">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="d-block">Administrador de Tareas</a>
+        </div>
+    </div>
+
+<!-- BUSCADOR EN BARRA LATERAL
+<div class="form-inline">
+<div class="input-group" data-widget="sidebar-search">
+<input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+<div class="input-group-append">
+<button class="btn btn-sidebar">
+<i class="fas fa-search fa-fw"></i>
+</button>
+</div>
+</div><div class="sidebar-search-results"><div class="list-group"><a href="https://adminlte.io/themes/v3/index.html#" class="list-group-item"><div class="search-title"><strong class="text-light"></strong>N<strong class="text-light"></strong>o<strong class="text-light"></strong> <strong class="text-light"></strong>e<strong class="text-light"></strong>l<strong class="text-light"></strong>e<strong class="text-light"></strong>m<strong class="text-light"></strong>e<strong class="text-light"></strong>n<strong class="text-light"></strong>t<strong class="text-light"></strong> <strong class="text-light"></strong>f<strong class="text-light"></strong>o<strong class="text-light"></strong>u<strong class="text-light"></strong>n<strong class="text-light"></strong>d<strong class="text-light"></strong>!<strong class="text-light"></strong></div><div class="search-path"></div></a></div></div>
+</div>
+-->
+
+<nav class="mt-2">
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- ELEMENTOS DESPLEGABLES 1 EN LA BARRA DE LATERAL-->
+<li class="nav-item menu-open">
+    <a href="https://adminlte.io/themes/v3/index.html#" class="nav-link active">
+    <i class="nav-icon fas fa-tachometer-alt"></i>
+    <p>
+    CATEGORIAS
+    <i class="right fas fa-angle-left"></i>
+    </p>
+    </a>
+
+    <ul class="nav nav-treeview">
+    <li class="nav-item">
+<!--BARRA LATERAL CREACION CATEGORIA-->
+    <a asp-area="" asp-controller="Categorias" asp-action="RegistroCategoria" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+            <p>Nueva Categoria</p>
+    </a>
+<!--BARRA LATERAL CREACION CATEGORIA-->
+<!--BARRA LATERAL CONSULTAR CATEGORIAS-->
+    <a asp-area="" asp-controller="Login" asp-action="Registrarse" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+            <p>Ver Categorias</p>
+    </a>
+<!--BARRA LATERAL CONSULTAR CATEGORIAS-->
+<!--BARRA LATERAL ASIGNAR CATEGORIAS-->
+    <a asp-area="" asp-controller="Login" asp-action="Registrarse" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+            <p>Conceder Acceso</p>
+    </a>
+<!--BARRA LATERAL ASIGNAR CATEGORIAS-->
+    </li>
+    </ul>
+
+</li>
+        <!-- ELEMENTOS DESPLEGABLES 2 EN LA BARRA DE LATERAL-->
+<li class="nav-item menu-open">
+    <a href="https://adminlte.io/themes/v3/index.html#" class="nav-link active">
+    <i class="nav-icon fas fa-tachometer-alt"></i>
+    <p>
+    TAREAS
+    <i class="right fas fa-angle-left"></i>
+    </p>
+    </a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<!--BARRA LATERAL CREACION TAREA-->
+    <a asp-area="" asp-controller="Tareas" asp-action="RegistroTarea" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+            <p>Nueva Tarea</p>
+    </a>
+<!--BARRA LATERAL CREACION TAREA-->
+<!--BARRA LATERAL ASIGNACION DE TAREA-->
+    <a asp-area="" asp-controller="Login" asp-action="Registrarse" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+            <p>Asignar Tareas</p>
+    </a>
+<!--BARRA LATERAL CREACION TAREA-->
+<!--BARRA LATERAL CONSULTAS DE TAREAS-->
+    <a asp-area="" asp-controller="Login" asp-action="Registrarse" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+            <p>Ver Tareas</p>
+    </a>
+<!--BARRA LATERAL CONULTA DE TAREAS-->
+</li>
+</ul>
+
+</li>
+        <!-- ELEMENTOS DESPLEGABLES 2 EN LA BARRA DE LATERAL-->
+</ul>
+</nav>
+</div></div></div><div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden"><div class="os-scrollbar-track"><div class="os-scrollbar-handle" style="width: 100%; transform: translate(0px, 0px);"></div></div></div><div class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden"><div class="os-scrollbar-track"><div class="os-scrollbar-handle" style="height: 42.4577%; transform: translate(0px, 0px);"></div></div></div><div class="os-scrollbar-corner"></div></div>
+</aside>
+                                       <!--BARRA LATERAL-->
+
+<!-- CENTRO DE LA PAGINA -->
+<!-- CONTENEDOR -->
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+</div>
+</div>
+<!-- FOOTER -->
+
+<!-- CONTENEDOR Y FOOTER -->
+
+<aside class="control-sidebar control-sidebar-dark">
+      <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - PLF - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <!-- Control sidebar content goes here -->
+  </aside>
+
+
+<div id="sidebar-overlay"></div>
+
+    <!-- Scripts -->
+
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/dashboard.js"></script>
+    <script src="~/js/jquery.overlayScrollbars.js"></script>
+    <script src="~/js/adminlte.js"></script>
+    <!-- Scripts -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+</body>
+                                                       <!--INTERIOR DE LA PAGINA-->
+</html>

@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    ViewBag.Title = "Login";    
+}
+@model LoginViewModel
+
+
+<div class="content-wrapper">
+    <h2>Login</h2>
+    @{
+        if (!string.IsNullOrEmpty(ViewBag.Message))
+        {
+            <div class= "alert alert-danger"> 
+            @ViewBag.Message
+            </div>
+        }
+    }
+    <section>
+        <div class="col-md-12" >
+            <form asp-controller="Login" asp-action="Valida" id="Login" method="post">
+                <h4>Iniciar Sesi&oacute;n</h4>
+                <hr/>
+                <div asp-validation-summary="All" class="text-danger"> </div>
+                <!-- CORREO ELECTRONICO OBTENCION y VALIDACION -->
+                <div class="form-group">
+                    <label asp-for="correo">Correo Electronico</label>
+                    <input asp-for="correo" class="form-control" type="email" name="correo" value="" required/>
+                    <span asp-validation-for="correo" class="text-danger"></span>
+                </div>
+                <!-- PASSWORD OBTENCION Y OCIULTARLA EN TIPO -->
+                <div class="form-group">
+                    <label asp-for="password">Password</label>
+                    <input asp-for="password" class="form-control" type="password" name="password" value="" required/>
+                    <span asp-validation-for="password" class="text-danger"></span>
+                </div>
+                <!-- CREACION DE BOTON PARA LOGEARSE -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Login</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <label id="indexMessage" class="error">@Html.DisplayFor(m => m.ErrorMessage)</label>
+</div>

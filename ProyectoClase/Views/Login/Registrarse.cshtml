@@ -1,0 +1,34 @@
+﻿@model RegistroViewModel
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    ViewData["Tittle"] = "Registrarse";
+}
+<div class="content-wrapper" style="min-height: 519px;">
+    <h2>Nuevo Usuario</h2>
+    <form asp-action ="Insert" method="post" >
+        <div class="form-group">
+            <label asp-for="correo">Correo Electronico</label>
+            <input class="form-control" type="email" asp-for="correo" required/>
+        </div>
+        <div class="form-group">
+            <label asp-for="password">Password</label>
+            <input class="form-control" type="password" asp-for="password" required/>
+        </div>
+        <div class="form-group">
+            <label asp-for="tipousuario">Tipo de Usuario</label>
+            <select class="form-control" asp-for="tipousuario">
+                <option class="form-control" value="1" asp-for="tipousuario">Administrador</option>
+                <option class="form-control" value="2" asp-for="tipousuario">Usuario</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="nombre">Nombre</label>
+            <input class="form-control" type="text" asp-for="nombre" required/>
+        </div>
+        <div class="form-group">
+            <label asp-for="apellido">Apellidos</label>
+            <input class="form-control" type="text" asp-for="apellido" required/>
+        </div>
+        <button class="btn btn-outline-success" type="submit">Crear Usuario</button>
+    </form>
+</div>
