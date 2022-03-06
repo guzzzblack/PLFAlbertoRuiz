@@ -10,7 +10,7 @@
     }
 </script>
 <div class="content-header">
-    <h2>Usuarios</h2>
+    <h2>Tareas de Usuarios</h2>
 </div>
 <form action="" id="MiForm" name="MiForm" method="post">
     <input type="hidden" id="id" name="id" value="" />
@@ -41,7 +41,7 @@
                 <div class="col-lg-3 col-6">
                     <div class="@respuestas">
                         <div class="inner">
-                            <h3>Numero de Tareas</h3>
+                            <h3># Tareas</h3>
                             <p>
                                 @m.nombre
                                 @m.apellido
@@ -50,7 +50,7 @@
                         <div class="icon">
                             <i class="ion ion-android-person"></i>
                         </div>
-                        <a href="#" data-id="@m.idusuario" class="small-box-footer">
+                        <a href="javascript:enviar('/Tareas/Individual','@m.idusuario')" data-id="@m.idusuario" class="small-box-footer">
                             More Info
                             <i class="fas fas-arrow-circle-right"></i>
                         </a>

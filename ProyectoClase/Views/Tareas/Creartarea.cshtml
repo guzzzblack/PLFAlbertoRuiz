@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    ViewData["Tittle"] = "Crear Tarea";
+}
+@model TareasViewModel
+<div class="content-wrapper" style="min-height: 519px;">
+    <h2>Nueva Tarea</h2>
+    <form asp-action ="Insert" method="post" >
+        <!--FORMULARIO DE NIVEL DE PRIORIDAD DE LAS TAREAS-->
+        <div class="form-group">
+            <label asp-for="prioridad">Nivel de Prioridad</label>
+            <select class="form-control" asp-for="prioridad">
+                <option class="form-control" value="1" asp-for="prioridad">Urgente</option>
+                <option class="form-control" value="2" asp-for="prioridad">Medio</option>
+                <option class="form-control" value="3" asp-for="prioridad">Bajo</option>
+            </select>
+        </div>
+        <!--DESCRIPCION DE LA TAREA-->
+        <div class="form-group">
+            <label asp-for="descripcion">Tarea Descripcion</label>
+            <input class="form-control" type="text" asp-for="descripcion" required/>
+        </div>
+        <!--ID USUARIO CREADOR-->
+        <!-- PUEDE QUE NO SE USE PARA QUE SE RELLENE EN AUTOMATICO
+        <div class="form-group">
+            <label asp-for="idusuariocreador">Usuario Creador</label>
+            <input class="form-control" type="text" asp-for="idusuariocreador" required/>
+        </div>
+        -->
+        
+        <!--ID USUARIO ASIGNADO-->
+        <!--PONER UNA LISTA DESPLEGABLE QUE RECORRA TODOS LOS USUARIOS Y TRAIGA EL NOMBRE DEL USUARIO-->
+        <div class="form-group">
+            <label asp-for="idusuarioasignado">Usuario Asignado</label>
+            <input class="form-control" type="text" asp-for="idusuarioasignado" required/>
+        </div>
+
+        <!-- ID CATEGORIA -->
+        <div class="form-group">
+            <label asp-for="idcategoriatarea">Grupo de Categoria</label>
+            <input class="form-control" type="text" asp-for="idcategoriatarea" required/>
+        </div>
+
+        <button class="btn btn-outline-success" type="submit">Crear Tarea</button>
+
+    </form>
+</div>

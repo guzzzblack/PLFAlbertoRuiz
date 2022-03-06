@@ -38,7 +38,7 @@
     <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link" >Cuenta</a>
     </li> -->
     <li class="nav-item d-none d-sm-inline-block">  
-    <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Cerrar Sesion</a>
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Pagina Principal</a>
     </li>
 </ul>
 <!--ENCABEZADO PAGINA DE INICIO Y CONTROL DE BARRA LATERAL-->
@@ -81,19 +81,19 @@
     <ul class="nav nav-treeview">
     <li class="nav-item">
 <!--BARRA LATERAL CREACION CATEGORIA-->
-    <a asp-area="" asp-controller="Categorias" asp-action="RegistroCategoria" class="nav-link">
+    <a asp-area="" asp-controller="Categorias" asp-action="Nuevacategoria" class="nav-link">
         <i class="far fa-circle nav-icon"></i>
             <p>Nueva Categoria</p>
     </a>
 <!--BARRA LATERAL CREACION CATEGORIA-->
 <!--BARRA LATERAL CONSULTAR CATEGORIAS-->
-    <a asp-area="" asp-controller="Login" asp-action="Registrarse" class="nav-link">
+    <a asp-area="" asp-controller="Categorias" asp-action="Vercategoria" class="nav-link">
         <i class="far fa-circle nav-icon"></i>
             <p>Ver Categorias</p>
     </a>
 <!--BARRA LATERAL CONSULTAR CATEGORIAS-->
 <!--BARRA LATERAL ASIGNAR CATEGORIAS-->
-    <a asp-area="" asp-controller="Login" asp-action="Registrarse" class="nav-link">
+    <a asp-area="" asp-controller="Categorias" asp-action="Permitircategoria" class="nav-link">
         <i class="far fa-circle nav-icon"></i>
             <p>Conceder Acceso</p>
     </a>
@@ -114,21 +114,21 @@
 <ul class="nav nav-treeview">
 <li class="nav-item">
 <!--BARRA LATERAL CREACION TAREA-->
-    <a asp-area="" asp-controller="Tareas" asp-action="RegistroTarea" class="nav-link">
+    <a asp-area="" asp-controller="Tareas" asp-action="Listatareas" class="nav-link">
         <i class="far fa-circle nav-icon"></i>
-            <p>Nueva Tarea</p>
+            <p>Lista de Tareas</p>
     </a>
 <!--BARRA LATERAL CREACION TAREA-->
 <!--BARRA LATERAL ASIGNACION DE TAREA-->
-    <a asp-area="" asp-controller="Login" asp-action="Registrarse" class="nav-link">
+    <a asp-area="" asp-controller="Tareas" asp-action="Creartarea" class="nav-link">
         <i class="far fa-circle nav-icon"></i>
-            <p>Asignar Tareas</p>
+            <p>Crear Tareas</p>
     </a>
 <!--BARRA LATERAL CREACION TAREA-->
 <!--BARRA LATERAL CONSULTAS DE TAREAS-->
-    <a asp-area="" asp-controller="Login" asp-action="Registrarse" class="nav-link">
+    <a asp-area="" asp-controller="Tareas" asp-action="Tareas" class="nav-link">
         <i class="far fa-circle nav-icon"></i>
-            <p>Ver Tareas</p>
+            <p>Completar Tareas</p>
     </a>
 <!--BARRA LATERAL CONULTA DE TAREAS-->
 </li>
@@ -156,14 +156,14 @@
 <!-- CONTENEDOR Y FOOTER -->
 
 <aside class="control-sidebar control-sidebar-dark">
-      <footer class="border-top footer text-muted">
+      
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <footer class="border-top footer text-muted" content="width=device-width, initial-scale=1">
         <div class="container">
             &copy; 2022 - PLF - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <!-- Control sidebar content goes here -->
-  </aside>
-
 
 <div id="sidebar-overlay"></div>
 
