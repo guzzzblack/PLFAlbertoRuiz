@@ -1,5 +1,5 @@
 ﻿@using Model.Domain
-@model List<Usuario>
+@model List<Categorias>
 <script>
     function enviar(laUrl, elId){
         var elform = document.getElementById("MiForm");
@@ -9,9 +9,7 @@
         elform.submit();
     }
 </script>
-<div class="content-header">
-    <h2>Usuarios Registrados</h2>
-</div>
+
 <form action="" id="MiForm" name="MiForm" method="post">
     <input type="hidden" id="id" name="id" value="" />
     <section class="content">
@@ -38,20 +36,23 @@
                     respuesta = "small-box bg-danger";
                 }
                 string respuestas = respuesta.ToString();
+                
                 <div class="col-lg-3 col-6">
                     <div class="@respuestas">
+                        
                         <div class="inner">
-                            <h3>Usuario #@m.idusuario</h3>
+                            <h3># Tareas</h3>
                             <p>
-                                @m.nombre
-                                @m.apellido
+                                @m.idcategoria
+                                @m.nombrecategoria
                             </p>
                         </div>
+
                         <div class="icon">
                             <i class="ion ion-android-person"></i>
                         </div>
-                        <a href="javascript:enviar('/Tareas/Individual','@m.idusuario')" data-id="@m.idusuario" class="small-box-footer">
-                            More Info
+                        <a href="javascript:enviar('/Categorias/Individual','@m.idcategoria')" data-id="@m.nombrecategoria" class="small-box-footer">
+                            Mas informacion
                             <i class="fas fas-arrow-circle-right"></i>
                         </a>
                     </div>

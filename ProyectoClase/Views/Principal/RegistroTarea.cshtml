@@ -5,44 +5,38 @@
 @model TareasViewModel
 <div class="content-wrapper" style="min-height: 519px;">
     <h2>Nueva Tarea</h2>
- <!-- 
+ 
     <form asp-action ="Insert" method="post">
-        <div class="form-group">
-            <label asp-for="fechainicio">Fecha de Asignacion</label>
-            <input class="form-control" type="datetime" asp-for="fechainicio" required/>
-        </div>
-        
+        <!--PRIORIDAD DE LA TAREA-->
         <div class="form-group">
             <label asp-for="prioridad">Tipo de Usuario</label>
-            <select class="form-control" asp-for="tipousuario">
+            <select class="form-control" asp-for="prioridad">
                 <option class="form-control" value="1" asp-for="prioridad">Urgente</option>
                 <option class="form-control" value="2" asp-for="prioridad">Medio</option>
                 <option class="form-control" value="3" asp-for="prioridad">Bajo</option>
             </select>
         </div>
+        <!--Descripcion de la tarea-->
         <div class="form-group">
-            <label asp-for="descripcion">Nombre</label>
-            <input class="form-control" type="text" asp-for="nombre" required/>
+            <label asp-for="descripcion">Descripcion de la Tarea</label>
+            <input class="form-control" type="text" asp-for="descripcion" required/>
         </div>
+        <!--Usuario Creador-->
         <div class="form-group">
-            <label asp-for="archivado">Apellidos</label>
-            <input class="form-control" type="text" asp-for="apellido" required/>
+            <label asp-for="idusuariocreador">Usuario Creador</label>
+            <input class="form-control" type="text" asp-for="idusuariocreador" required/>
         </div>
+        <!--Usuario Asignado-->
         <div class="form-group">
-            <label asp-for="idusuariocreador">Apellidos</label>
-            <input class="form-control" type="text" asp-for="apellido" required/>
+            <label asp-for="idusuarioasignado">Usuario Asignado</label>
+            <input class="form-control" type="text" asp-for="idusuarioasignado" required/>
         </div>
+        <!--ID Categoria-->
         <div class="form-group">
-            <label asp-for="idusuarioasignado">Apellidos</label>
-            <input class="form-control" type="text" asp-for="apellido" required/>
+            <label asp-for="idcategoriatarea">Categoria de la Tarea</label>
+            <input class="form-control" type="text" asp-for="idcategoriatarea" required/>
         </div>
-        
 
-        <div class="form-group">
-            <label asp-for="idcategoriatarea">Apellidos</label>
-            <input class="form-control" type="text" asp-for="apellido" required/>
-        </div>
         <button class="btn btn-outline-success" type="submit">Crear Usuario</button>
     </form>
--->
 </div>

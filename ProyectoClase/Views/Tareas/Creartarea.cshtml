@@ -5,7 +5,7 @@
 @model TareasViewModel
 <div class="content-wrapper" style="min-height: 519px;">
     <h2>Nueva Tarea</h2>
-    <form asp-action ="Insert" method="post" >
+    <form asp-action ="Inserttar" method="post" >
         <!--FORMULARIO DE NIVEL DE PRIORIDAD DE LAS TAREAS-->
         <div class="form-group">
             <label asp-for="prioridad">Nivel de Prioridad</label>
@@ -17,16 +17,15 @@
         </div>
         <!--DESCRIPCION DE LA TAREA-->
         <div class="form-group">
-            <label asp-for="descripcion">Tarea Descripcion</label>
+            <label asp-for="descripcion">Descripcion</label>
             <input class="form-control" type="text" asp-for="descripcion" required/>
         </div>
         <!--ID USUARIO CREADOR-->
-        <!-- PUEDE QUE NO SE USE PARA QUE SE RELLENE EN AUTOMATICO
+       
         <div class="form-group">
             <label asp-for="idusuariocreador">Usuario Creador</label>
             <input class="form-control" type="text" asp-for="idusuariocreador" required/>
         </div>
-        -->
         
         <!--ID USUARIO ASIGNADO-->
         <!--PONER UNA LISTA DESPLEGABLE QUE RECORRA TODOS LOS USUARIOS Y TRAIGA EL NOMBRE DEL USUARIO-->

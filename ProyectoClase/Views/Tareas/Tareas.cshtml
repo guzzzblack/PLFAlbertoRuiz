@@ -2,7 +2,26 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
     ViewData["Tittle"] = "Tareas";
 }
-
+@model TareasViewModel
 <div class="content-wrapper" style="min-height: 519px;">
-    <h2>Completar Tareas</h2>
+    <h2>Estaus de las Tareas</h2>
+    <form asp-action ="Insert" method="post" >
+        <!--AQUI VA UN CICLO QUE RECORRE TODA LA LISTA DE TAREAS Y OBTIENE EL NOMBRE-->
+        <div class="form-group">
+            <label asp-for="descripcion">Descripcion de la Tarea</label>
+            <input class="form-control" type="text" asp-for="descripcion" required/>
+        </div>
+        <!--LISTA DE ELEMENTOS PARA EDITAR LAS TAREAS-->
+        <div class="form-group">
+            <label asp-for="estadotarea">Estado de la Tarea</label>
+            <select class="form-control" asp-for="estadotarea">
+                <option class="form-control" value="0" asp-for="estadotarea">Completado</option>
+                <option class="form-control" value="1" asp-for="estadotarea">En curso</option>
+                <option class="form-control" value="2" asp-for="estadotarea">Pendiente</option>
+                <option class="form-control" value="3" asp-for="estadotarea">No Realizado</option>
+            </select>
+        </div>
+
+        <button class="btn btn-outline-success" type="submit">Completar Tarea</button>
+    </form>
 </div>

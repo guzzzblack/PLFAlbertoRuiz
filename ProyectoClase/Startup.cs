@@ -31,7 +31,9 @@ namespace ProyectoClase
             var sqlConection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ProyectoDbContext>(options => options.UseSqlServer(sqlConection));
 
-            services.AddTransient<IUsuarioService, UsuarioService>(); 
+            services.AddTransient<IUsuarioService, UsuarioService>();
+            services.AddTransient<ITareaService, TareaService>();
+            services.AddTransient<ICategoriaService, CategoriaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

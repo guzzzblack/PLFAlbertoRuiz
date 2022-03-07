@@ -5,22 +5,23 @@ using System.Linq;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace Service
 {
-    public interface IUsuarioService
+    public interface ICategoriaService
     {
-        bool Create(Usuario model);
-        IEnumerable<Usuario> ShowAll();
+        bool Create(Categorias model);
+        IEnumerable<Categorias> ShowAllcat();
     }
-    public class UsuarioService : IUsuarioService
+    public class CategoriaService : ICategoriaService
     {
         private readonly ProyectoDbContext _context;
 
-        public UsuarioService(ProyectoDbContext context)
+        public CategoriaService(ProyectoDbContext contextcat)
         {
-            _context = context;
+            _context = contextcat;
         }
-        public bool Create(Usuario model)
+        public bool Create(Categorias model)
         {
             try
             {
@@ -30,12 +31,12 @@ namespace Service
             }
             catch (Exception) { return false; }
         }
-        public IEnumerable<Usuario> ShowAll()
+        public IEnumerable<Categorias> ShowAllcat()
         {
-            var result = new List<Usuario>();
+            var result = new List<Categorias>();
             try
             {
-                result = _context.Usuario.OrderByDescending(x => x.idusuario).ToList();
+                result = _context.Categorias.OrderByDescending(x => x.idcategoria).ToList();
             }
             catch (Exception) { }
             return result;
